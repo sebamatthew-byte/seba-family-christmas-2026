@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🎄 Seba Family Christmas Game 2026 🎄</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #c41e3a;
+      --green: #0b6b3a;
+      --gold: #d4af37;
+      --snow: #f0f8ff;
+      --dark: #1a1a2e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #0f2027 0%, #203a43 40%, #2c5364 100%);
+      font-family: 'Poppins', sans-serif;
+      color: var(--snow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 12px;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      font-size: 1em;
+      font-family: Arial;
+      text-shadow: 0 0 5px rgba(255,255,255,0.8);
+      animation: fall linear infinite;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.8;
+    }
+    @keyframes fall {
+      to { transform: translateY(105vh) rotate(360deg); }
+    }
+    .container {
+      position: relative;
+      z-index: 10;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Mountains of Christmas', cursive;
+      font-size: clamp(1.5rem, 5.5vw, 2.3rem);
+      color: #fff;
+      text-shadow: 0 0 20px rgba(196,30,58,0.6), 2px 2px 0 var(--green);
+      margin-bottom: 6px;
+      line-height: 1.15;
+    }
+    .subtitle {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 22px;
+      color: #b8d4e8;
+    }
+    .card-wrapper {
+      background: linear-gradient(145deg, #8b0000, #c41e3a);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2);
+      border: 3px solid var(--gold);
+      position: relative;
+    }
+    .card-wrapper::before {
+      content: '✦';
+      position: absolute;
+      top: -12px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--dark);
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .ticket-label {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .scratch-area {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      background: #fff;
+      aspect-ratio: 1.4 / 1;
+    }
+    #result {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      text-align: center;
+      background: linear-gradient(135deg, #fff 0%, #f8f0e3 100%);
+      color: var(--dark);
+      z-index: 1;
+    }
+    #result.win {
+      background: linear-gradient(135deg, #fff8e7 0%, #ffe4a0 50%, #ffd700 100%);
+    }
+    #result.lose {
+      background: linear-gradient(135deg, #e8f4f8 0%, #d0e8f0 100%);
+    }
+    #result .emoji { font-size: 2.8rem; margin-bottom: 6px; line-height: 1; }
+    #result h2 {
+      font-family: 'Mountains of Christmas', cursive;
+      font-size: 1.7rem;
+      margin-bottom: 4px;
+      line-height: 1.15;
+    }
+    #result.win h2 { color: var(--red); }
+    #result.lose h2 { color: #2c5364; }
+    #result p {
+      font-size: 0.9rem;
+      line-height: 1.35;
+      max-width: 260px;
+    }
+    #result .prize-note {
+      margin-top: 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--green);
+      background: rgba(11,107,58,0.12);
+      padding: 8px 12px;
+      border-radius: 12px;
+      line-height: 1.35;
+      max-width: 280px;
+    }
+    canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="%23c0c0c0" stroke="%23888" stroke-width="2"/><text x="16" y="21" text-anchor="middle" font-size="14" fill="%23555">❄</text></svg>') 16 16, crosshair;
+      touch-action: none;
+      border-radius: 12px;
+    }
+    .instructions {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: #a8c5d8;
+      line-height: 1.4;
+    }
+    .instructions strong { color: #fff; }
+    .status {
+      margin-top: 14px;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: none;
+    }
+    .status.show { display: block; }
+    .status.played {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .status.error {
+      background: rgba(196,30,58,0.3);
+      border: 1px solid var(--red);
+    }
+    .footer {
+      margin-top: 28px;
+      font-size: 0.75rem;
+      opacity: 0.6;
+      color: #8ba3b5;
+    }
+    .confetti-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 100;
+    }
+    .played-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      border-radius: 12px;
+      color: white;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-align: center;
+      padding: 20px;
+    }
+    .played-overlay.show { display: flex; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎄 Seba Family Christmas Game 2026 🎄</h1>
+    <p class="subtitle">Scratch your unique ticket & see if you won!</p>
+
+    <div class="card-wrapper">
+      <div class="ticket-label">Seba Family Ticket</div>
+      <div class="scratch-area" id="scratchArea">
+        <div id="result">
+          <!-- Filled by JS -->
+        </div>
+        <canvas id="scratchCanvas"></canvas>
+        <div class="played-overlay" id="playedOverlay">
+          Already scratched!<br><small style="font-weight:400;opacity:0.9">This ticket can only be played once.</small>
+        </div>
+      </div>
+      <p class="instructions" id="instructions">
+        <strong>Scratch</strong> the silver coating with your finger or mouse<br>to reveal your Christmas fate!
+      </p>
+    </div>
+
+    <div class="status" id="status"></div>
+    <p class="footer">One play per ticket · Results are final · Seba Family Christmas Game 2026</p>
+  </div>
+
+  <canvas class="confetti-canvas" id="confetti"></canvas>
+
+  <script>
+    // ========== CONFIG ==========
+    const WINNERS = new Set([
+      '9T84AZ', '3GDPPQ', 'Q85JSG', 'I64CIY', '5IGQPK'
+    ]);
+
+    const VALID_CODES = new Set([
+      'XAJI0Y','6DPBHS','AHXTHV','3A3ZMF','8MDD4V','30T9NT','3W5UZB','IKCIDK',
+      'WNNHJ7','XVG0FN','9XUY41','IBLJH7','5LXO6Q','JIUJV6','OH9SDB','DW2PCN',
+      '9T84AZ','YTJXEP','Q85JSG','65KXVF','1T2TAL','A753LC','58DRC1','1ERTJ5',
+      'PHT0HL','9XPSEI','MVIHCW','I64CIY','HE7UR2','3GDPPQ','0Y9DOM','5IGQPK',
+      'I7P5TB','94874F','RHOCN9','ESS4DI','VU2T01','1VIWD3'
+    ]);
+
+    const WIN_MESSAGES = [
+      { title: "YOU WON!", body: "🎄 Congratulations! You've scratched a winning ticket!" },
+      { title: "JACKPOT!", body: "🎅 Ho ho ho! You're one of the lucky five!" },
+      { title: "WINNER!", body: "✨ The Christmas spirits smiled on you!" }
+    ];
+    const LOSE_MESSAGES = [
+      { title: "Not this year...", body: "❄️ The snow settled on an empty spot. Better luck next Christmas!" },
+      { title: "Close, but no cigar", body: "🎁 Your present was full of holiday cheer... and nothing else. Try again next year!" },
+      { title: "Coal in the stocking", body: "🛷 The reindeer flew right over your house this time." },
+      { title: "Almost!", body: "🦌 So close you could smell the eggnog. Next year is your year!" }
+    ];
+    const BLESSING = "Merry Christmas and Happy New Year — we pray for a blessed 2027 for all.";
+    const CLAIM_INSTRUCTIONS = "Screenshot this win screen and send a selfie to Matt at 248-561-8251 to claim your prize!";
+
+    const params = new URLSearchParams(window.location.search);
+    const code = (params.get('t') || params.get('code') || '').toUpperCase().trim();
+    const storageKey = 'xmas_scratch_' + code;
+    let isWinner = false;
+    let hasPlayed = false;
+    let scratching = false;
+    let scratchedPercent = 0;
+
+    const canvas = document.getElementById('scratchCanvas');
+    const ctx = canvas.getContext('2d');
+    const resultEl = document.getElementById('result');
+    const statusEl = document.getElementById('status');
+    const playedOverlay = document.getElementById('playedOverlay');
+    const instructions = document.getElementById('instructions');
+    const confettiCanvas = document.getElementById('confetti');
+    const confettiCtx = confettiCanvas.getContext('2d');
+
+    function init() {
+      createSnowflakes(28);
+
+      if (!code) {
+        showError('No ticket code found.\nMake sure you used the full link you received.');
+        return;
+      }
+      if (!VALID_CODES.has(code)) {
+        showError('This ticket code is not valid.\nDouble-check the link from your message.');
+        return;
+      }
+
+      isWinner = WINNERS.has(code);
+      hasPlayed = localStorage.getItem(storageKey) === 'played';
+
+      const msg = isWinner
+        ? WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
+        : LOSE_MESSAGES[Math.floor(Math.random() * LOSE_MESSAGES.length)];
+
+      resultEl.className = isWinner ? 'win' : 'lose';
+      resultEl.innerHTML = `
+        <div class="emoji">${isWinner ? '🎉' : '❄️'}</div>
+        <h2>${msg.title}</h2>
+        <p>${msg.body}</p>
+        <p style="margin-top:10px;font-size:0.82rem;line-height:1.35;opacity:0.95;">${BLESSING}</p>
+        ${isWinner ? `<div class="prize-note">${CLAIM_INSTRUCTIONS}</div>` : ''}
+      `;
+
+      if (hasPlayed) {
+        canvas.style.display = 'none';
+        instructions.innerHTML = isWinner
+          ? '<strong>🎉 Winner!</strong> Screenshot this screen & send a selfie to Matt at 248-561-8251 to claim!'
+          : 'Thanks for playing — Merry Christmas & Happy New Year!';
+        statusEl.textContent = 'This ticket was already scratched on this device.';
+        statusEl.className = 'status show played';
+        if (isWinner) launchConfetti();
+        return;
+      }
+
+      setupCanvas();
+      window.addEventListener('resize', setupCanvas);
+    }
+
+    function showError(msg) {
+      document.querySelector('.card-wrapper').style.display = 'none';
+      statusEl.textContent = msg;
+      statusEl.className = 'status show error';
+      instructions.style.display = 'none';
+    }
+
+    function setupCanvas() {
+      const area = document.getElementById('scratchArea');
+      const rect = area.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      canvas.style.width = rect.width + 'px';
+      canvas.style.height = rect.height + 'px';
+      ctx.scale(dpr, dpr);
+
+      const w = rect.width;
+      const h = rect.height;
+      const grad = ctx.createLinearGradient(0, 0, w, h);
+      grad.addColorStop(0, '#d0d0d0');
+      grad.addColorStop(0.3, '#f5f5f5');
+      grad.addColorStop(0.5, '#c8c8c8');
+      grad.addColorStop(0.7, '#e8e8e8');
+      grad.addColorStop(1, '#b0b0b0');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, w, h);
+
+      ctx.fillStyle = 'rgba(100,100,100,0.35)';
+      ctx.font = 'bold 18px Poppins, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('SCRATCH HERE', w / 2, h / 2 - 12);
+      ctx.font = '13px Poppins, sans-serif';
+      ctx.fillText('❄  Christmas Magic  ❄', w / 2, h / 2 + 14);
+
+      ctx.fillStyle = 'rgba(255,255,255,0.4)';
+      for (let i = 0; i < 80; i++) {
+        const x = Math.random() * w;
+        const y = Math.random() * h;
+        ctx.beginPath();
+        ctx.arc(x, y, Math.random() * 1.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function getPos(e) {
+      const rect = canvas.getBoundingClientRect();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      return {
+        x: clientX - rect.left,
+        y: clientY - rect.top
+      };
+    }
+
+    function scratch(x, y) {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.beginPath();
+      ctx.arc(x, y, 22, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(x, y, 14, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function checkPercent() {
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const pixels = imageData.data;
+      let transparent = 0;
+      for (let i = 3; i < pixels.length; i += 16) {
+        if (pixels[i] === 0) transparent++;
+      }
+      const totalSampled = pixels.length / 16;
+      scratchedPercent = (transparent / totalSampled) * 100;
+
+      if (scratchedPercent > 45) {
+        finishScratch();
+      }
+    }
+
+    function finishScratch() {
+      if (hasPlayed) return;
+      hasPlayed = true;
+      localStorage.setItem(storageKey, 'played');
+
+      canvas.style.transition = 'opacity 0.6s ease';
+      canvas.style.opacity = '0';
+      setTimeout(() => {
+        canvas.style.display = 'none';
+      }, 600);
+
+      instructions.innerHTML = isWinner
+        ? '<strong>🎉 Winner!</strong> Screenshot this screen & send a selfie to Matt at 248-561-8251 to claim!'
+        : 'Thanks for playing — Merry Christmas & Happy New Year!';
+
+      if (isWinner) {
+        setTimeout(launchConfetti, 300);
+      }
+    }
+
+    function startScratch(e) {
+      e.preventDefault();
+      if (hasPlayed) return;
+      scratching = true;
+      const pos = getPos(e);
+      scratch(pos.x, pos.y);
+    }
+    function moveScratch(e) {
+      e.preventDefault();
+      if (!scratching || hasPlayed) return;
+      const pos = getPos(e);
+      scratch(pos.x, pos.y);
+      if (Math.random() < 0.3) checkPercent();
+    }
+    function endScratch() {
+      scratching = false;
+      if (!hasPlayed) checkPercent();
+    }
+
+    canvas.addEventListener('mousedown', startScratch);
+    canvas.addEventListener('mousemove', moveScratch);
+    canvas.addEventListener('mouseup', endScratch);
+    canvas.addEventListener('mouseleave', endScratch);
+    canvas.addEventListener('touchstart', startScratch, { passive: false });
+    canvas.addEventListener('touchmove', moveScratch, { passive: false });
+    canvas.addEventListener('touchend', endScratch);
+
+    function createSnowflakes(count) {
+      const symbols = ['❄', '❅', '❆', '•'];
+      for (let i = 0; i < count; i++) {
+        const flake = document.createElement('div');
+        flake.className = 'snowflake';
+        flake.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        flake.style.left = Math.random() * 100 + 'vw';
+        flake.style.fontSize = (Math.random() * 12 + 8) + 'px';
+        flake.style.animationDuration = (Math.random() * 8 + 6) + 's';
+        flake.style.animationDelay = (Math.random() * 5) + 's';
+        flake.style.opacity = Math.random() * 0.6 + 0.3;
+        document.body.appendChild(flake);
+      }
+    }
+
+    let confettiPieces = [];
+    let confettiAnimating = false;
+
+    function launchConfetti() {
+      confettiCanvas.width = window.innerWidth;
+      confettiCanvas.height = window.innerHeight;
+      confettiPieces = [];
+      const colors = ['#c41e3a', '#0b6b3a', '#d4af37', '#ffffff', '#ff6b6b', '#4ecdc4'];
+      for (let i = 0; i < 120; i++) {
+        confettiPieces.push({
+          x: Math.random() * confettiCanvas.width,
+          y: Math.random() * confettiCanvas.height - confettiCanvas.height,
+          w: Math.random() * 10 + 5,
+          h: Math.random() * 6 + 3,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          speed: Math.random() * 3 + 2,
+          angle: Math.random() * 360,
+          spin: Math.random() * 10 - 5,
+          opacity: 1
+        });
+      }
+      if (!confettiAnimating) {
+        confettiAnimating = true;
+        requestAnimationFrame(animateConfetti);
+      }
+    }
+
+    function animateConfetti() {
+      confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+      let alive = false;
+      for (const p of confettiPieces) {
+        p.y += p.speed;
+        p.x += Math.sin(p.angle * Math.PI / 180) * 1.5;
+        p.angle += p.spin;
+        p.opacity -= 0.004;
+        if (p.opacity <= 0 || p.y > confettiCanvas.height + 20) continue;
+        alive = true;
+        confettiCtx.save();
+        confettiCtx.translate(p.x, p.y);
+        confettiCtx.rotate(p.angle * Math.PI / 180);
+        confettiCtx.globalAlpha = Math.max(0, p.opacity);
+        confettiCtx.fillStyle = p.color;
+        confettiCtx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        confettiCtx.restore();
+      }
+      if (alive) {
+        requestAnimationFrame(animateConfetti);
+      } else {
+        confettiAnimating = false;
+        confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>

@@ -3,6 +3,9 @@
 
 FINAL COUNT: 38 recipients · 5 winners
 
+LIVE GAME URL (after you enable Pages):
+https://sebamatthew-byte.github.io/seba-family-christmas-2026/
+
 HOW IT WORKS
 ------------
 • Each person gets a unique link with a secret code.
@@ -12,20 +15,25 @@ HOW IT WORKS
 • You never see who won – just hand out the links/QRs randomly.
 • Winners must screenshot the win screen and send a selfie to Matt at 248-561-8251 to claim.
 
-SETUP
------
-1. The game is at: https://sebamatthew-byte.github.io/seba-family-christmas-2026/
-2. Each ticket = that URL + ?t=CODE
-3. Generate QR codes for each unique link.
+SETUP – ENABLE GITHUB PAGES (one-time, 30 seconds)
+--------------------------------------------------
+1. Go to: https://github.com/sebamatthew-byte/seba-family-christmas-2026/settings/pages
+2. Under "Build and deployment" → Source: Deploy from a branch
+3. Branch: main   Folder: / (root)
+4. Click Save
+5. Wait ~1 minute, then the live site is ready at the URL above.
 
-WINNERS (5) – these codes show the winning screen:
+Each ticket link =
+https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=CODE
+
+WINNERS (5)
   9T84AZ
   3GDPPQ
   Q85JSG
   I64CIY
   5IGQPK
 
-ALL 38 CODES (shuffle before assigning so you don’t know who gets a winner)
+ALL 38 CODES (shuffle before assigning)
 
  1. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=XAJI0Y
  2. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=6DPBHS
@@ -66,4 +74,4 @@ ALL 38 CODES (shuffle before assigning so you don’t know who gets a winner)
 37. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=VU2T01
 38. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=1VIWD3
 
-See the 3D print notes in the original tickets file for light QR tags.
+Shuffle the list, generate QRs, print the light 3D tags, and enjoy!

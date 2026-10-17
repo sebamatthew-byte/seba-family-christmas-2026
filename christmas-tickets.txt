@@ -1,0 +1,69 @@
+🎄 SEBA FAMILY CHRISTMAS GAME 2026 – YOUR TICKETS 🎄
+=====================================================
+
+FINAL COUNT: 38 recipients · 5 winners
+
+HOW IT WORKS
+------------
+• Each person gets a unique link with a secret code.
+• They open the link (or scan a QR) and scratch the digital card.
+• Exactly 5 of the 38 tickets are winners.
+• Each ticket can only be scratched once per device.
+• You never see who won – just hand out the links/QRs randomly.
+• Winners must screenshot the win screen and send a selfie to Matt at 248-561-8251 to claim.
+
+SETUP
+-----
+1. The game is at: https://sebamatthew-byte.github.io/seba-family-christmas-2026/
+2. Each ticket = that URL + ?t=CODE
+3. Generate QR codes for each unique link.
+
+WINNERS (5) – these codes show the winning screen:
+  9T84AZ
+  3GDPPQ
+  Q85JSG
+  I64CIY
+  5IGQPK
+
+ALL 38 CODES (shuffle before assigning so you don’t know who gets a winner)
+
+ 1. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=XAJI0Y
+ 2. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=6DPBHS
+ 3. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=AHXTHV
+ 4. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=3A3ZMF
+ 5. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=8MDD4V
+ 6. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=30T9NT
+ 7. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=3W5UZB
+ 8. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=IKCIDK
+ 9. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=WNNHJ7
+10. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=XVG0FN
+11. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=9XUY41
+12. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=IBLJH7
+13. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=5LXO6Q
+14. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=JIUJV6
+15. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=OH9SDB
+16. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=DW2PCN
+17. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=9T84AZ   ← WINNER
+18. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=YTJXEP
+19. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=Q85JSG   ← WINNER
+20. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=65KXVF
+21. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=1T2TAL
+22. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=A753LC
+23. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=58DRC1
+24. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=1ERTJ5
+25. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=PHT0HL
+26. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=9XPSEI
+27. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=MVIHCW
+28. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=I64CIY   ← WINNER
+29. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=HE7UR2
+30. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=3GDPPQ   ← WINNER
+31. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=0Y9DOM
+32. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=5IGQPK   ← WINNER
+33. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=I7P5TB
+34. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=94874F
+35. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=RHOCN9
+36. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=ESS4DI
+37. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=VU2T01
+38. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=1VIWD3
+
+See the 3D print notes in the original tickets file for light QR tags.

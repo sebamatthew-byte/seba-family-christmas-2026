@@ -1,30 +1,12 @@
 🎄 SEBA FAMILY CHRISTMAS GAME 2026 – YOUR TICKETS 🎄
 =====================================================
 
-FINAL COUNT: 38 recipients · 5 winners
+FINAL COUNT: 35 recipients · 5 winners
 
-LIVE GAME URL (after you enable Pages):
+LIVE GAME:
 https://sebamatthew-byte.github.io/seba-family-christmas-2026/
 
-HOW IT WORKS
-------------
-• Each person gets a unique link with a secret code.
-• They open the link (or scan a QR) and scratch the digital card.
-• Exactly 5 of the 38 tickets are winners.
-• Each ticket can only be scratched once per device.
-• You never see who won – just hand out the links/QRs randomly.
-• Winners must screenshot the win screen and send a selfie to Matt at 248-561-8251 to claim.
-
-SETUP – ENABLE GITHUB PAGES (one-time, 30 seconds)
---------------------------------------------------
-1. Go to: https://github.com/sebamatthew-byte/seba-family-christmas-2026/settings/pages
-2. Under "Build and deployment" → Source: Deploy from a branch
-3. Branch: main   Folder: / (root)
-4. Click Save
-5. Wait ~1 minute, then the live site is ready at the URL above.
-
-Each ticket link =
-https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=CODE
+Each ticket = that URL + ?t=CODE
 
 WINNERS (5)
   9T84AZ
@@ -33,7 +15,7 @@ WINNERS (5)
   I64CIY
   5IGQPK
 
-ALL 38 CODES (shuffle before assigning)
+ALL 35 CODES (shuffle before assigning so you don’t know who gets a winner)
 
  1. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=XAJI0Y
  2. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=6DPBHS
@@ -70,8 +52,5 @@ ALL 38 CODES (shuffle before assigning)
 33. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=I7P5TB
 34. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=94874F
 35. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=RHOCN9
-36. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=ESS4DI
-37. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=VU2T01
-38. https://sebamatthew-byte.github.io/seba-family-christmas-2026/?t=1VIWD3
 
-Shuffle the list, generate QRs, print the light 3D tags, and enjoy!
+Shuffle the list before putting them in the envelopes!
